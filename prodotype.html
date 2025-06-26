@@ -15,7 +15,15 @@
         <div class="row align-items-start rocco">
         <!--TOP coll 1 -->
             <div class="col">
-                how to play
+              <p  align="left">
+                how to play <br>
+                1-8 decks 53-416 cards <br>
+                get hand total as close to 21 without going over <br>
+                if dealer gets higher card value or 21 you loose <br>
+                2-10 face value <br>
+                JQK are 10 <br>
+                A 1 or 11 <br> 
+            </p>
             </div>
         <!--TOP coll 2 -->
             <div class="col">
@@ -48,30 +56,47 @@
 
         <!--MIDDLE coll 3 -->
             <div class="col">                
-                 3
+                 3 <p></p>
                 <button type="button" class="btn btn-primary btn-lg">START GAMBLING!!!</button>
             </div>
 
         <!--MIDDLE coll 4 -->
             <div class="col">    
-                 4            
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown  
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                        <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-                        <label class="btn btn-outline-success" for="success-outlined">on</label>
-                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-                        <label class="btn btn-outline-danger" for="danger-outlined">off</label>
-                    </ul>
+                 4     
+                 <P></P>       
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    settings!!!
+                </button>
+
+            <!-- Modal for settings -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">settings</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <div class="modal-body">
+                            
+                                sound    <input type="checkbox" class="btn-check" id="sound-check" autocomplete="off">
+                                             <label class="btn btn-outline-primary" for="sound-check"></label><br>    
+                                
+                                insurance   <input type="checkbox" class="btn-check" id="insurace-check" autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="insurace-check"></label><br>    
+                                
+                                repeat last bet <input type="checkbox" class="btn-check" id="reapeat-bet-check" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="reapeat-bet-check"></label><br>                              
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        <!--MIDDLE coll 5 -->
-            </div>
-            
+        <!--MIDDLE coll 5 -->                      
             <div class="col">
                 5
             </div>
