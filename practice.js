@@ -31,12 +31,21 @@ function Shuffle(deck) {
     }
     return deck;
 }
+
+
+function Deal(deck) {
+    let deck = deck.pop();
+
+}
+
+
+
 var mydeck = CreateDeck();
+mydeck = Shuffle(mydeck);
 console.log(mydeck);
-
-
-
-
+console.log(rank);
+console.log(deck);
+console.log("Player was dealt:", playerCard.rank, "of", playerCard.suit);
 
 
 
