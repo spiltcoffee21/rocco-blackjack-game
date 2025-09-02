@@ -23,7 +23,7 @@ var deck = [];
     }
     return deck;
 }
-const firstLetters = suits.map(item => item[0]);
+
 
 function Shuffle(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
@@ -50,7 +50,7 @@ function Deal(deck) {
 
 }
 
-function getcard()
+
 
 var mydeck = CreateDeck();
 mydeck = Shuffle(mydeck);
