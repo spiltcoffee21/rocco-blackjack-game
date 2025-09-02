@@ -23,6 +23,7 @@ var deck = [];
     }
     return deck;
 }
+const firstLetters = suits.map(item => item[0]);
 
 function Shuffle(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
@@ -32,13 +33,24 @@ function Shuffle(deck) {
     return deck;
 }
 
+document.getElementById("hitcrd").addEventListener("click", function() {
+    if (mydeck.length > 0) {
+        const card = Deal(mydeck);
+        console.log("You got:", card);   
+        console.log("Cards left in deck:", mydeck.length);
+    } else {
+        console.log("No more cards in the deck!");
+    }
+});
+
+
 
 function Deal(deck) {
     return deck.pop();
 
 }
 
-
+function getcard()
 
 var mydeck = CreateDeck();
 mydeck = Shuffle(mydeck);
