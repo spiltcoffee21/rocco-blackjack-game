@@ -8,23 +8,23 @@ var suits = {
 var ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 var deck = [];
 
-    for (var suitName of suits) {
+    for (var suitName in suits) {
         let SuitLetter = suits[suitName];
-        for ( var rank of ranks) {
+        for (var rank of ranks) {
             let value;
-            if (rank ==="Jack" || rank === "Queen" || rank === "King") {
+            if (rank === "Jack" || rank === "Queen" || rank === "King") {
                 value = 10;
-            }else if (rank === "Ace") {
+            } else if (rank === "Ace") {
                 value = 11;
-            }else {
+            } else {
                 value = parseInt(rank);
             }
-        
+
             deck.push({
                 suit: suitName,
                 rank: rank,
                 value: value,
-                img: `images/cards/${ranks}-${SuitLetter}.png`
+                img: `images/cards/${rank}-${SuitLetter}.png`
             });
         }
     }
@@ -56,7 +56,7 @@ function renderCard(card, handId) {
     img.src = card.img;
     img.classList.add("card");
     document.getElementById(handId).appendChild(img);
-
+}
 
  function DealDealer(deck, hand) {
     const card = Deal(deck);
@@ -117,4 +117,4 @@ document.getElementById("hitcrd").addEventListener("click", function() {
     } else {
         console.log("No more cards in the deck!");
     }
-)};
+});
