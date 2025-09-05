@@ -1,9 +1,15 @@
 function CreateDeck(){
-var suits = ["Hearts", "Dimonds", "Clubs", "Spades"]
+var suits = {
+    Hearts: "H",
+    Dimonds: "D",
+    Clubs: "C",
+    Spades: "S"
+};
 var ranks = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 var deck = [];
 
-    for (var suit of suits) {
+    for (var suitName of suits) {
+        let SuitLetter = suits[suitName];
         for ( var rank of ranks) {
             let value;
             if (rank ==="Jack" || rank === "Queen" || rank === "King") {
@@ -15,9 +21,10 @@ var deck = [];
             }
         
             deck.push({
-                suit: suit,
+                suit: suitName,
                 rank: rank,
-                value: value
+                value: value,
+                img: `images/cards/${ranks}-${SuitLetter}.png`
             });
         }
     }
@@ -44,9 +51,17 @@ function Deal(deck) {
 
 }
 
+function renderCard(card, handId) {
+    const img = document.createElement("img");
+    img.src = card.img;
+    img.classList.add("card");
+    document.getElementById(handId).appendChild(img);
+
+
  function DealDealer(deck, hand) {
     const card = Deal(deck);
     hand.push(card);
+    renderCard(card, "dealer-hand");
     return card;
 }
 
@@ -56,6 +71,7 @@ function Deal(deck) {
  function DealPlayer(deck, hand) {
     const card = Deal(deck);
     hand.push(card);
+    renderCard(card, "player-hand");
     return card;
 }
 
@@ -101,9 +117,4 @@ document.getElementById("hitcrd").addEventListener("click", function() {
     } else {
         console.log("No more cards in the deck!");
     }
-});
-
-
-
-
-        
+)};
